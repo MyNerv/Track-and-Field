@@ -47,8 +47,9 @@ function init() {
 }
 
 if(window.G_vmlCanvasManager){
-	document.getElementById('canvas');
-	ctc = canvas.getContext(canvas);
+        canvas = document.getElementById('canvas');
+        canvas = G_vmlCanvasManager.initElement(canvas);
+        ctx = canvas.getContext('2d');
 }
 
 function rect(x,y,w,h) {
